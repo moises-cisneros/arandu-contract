@@ -1,0 +1,20 @@
+# Dependencias
+node_modules
+.yarn/cache
+.yarn/unplugged
+
+# Archivos de entorno
+.env
+
+# Artefactos de Hardhat
+packages/hardhat/cache/
+packages/hardhat/artifacts/
+
+# Archivos de la app de React
+packages/react-app/dist
+packages/react-app/node_modules
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

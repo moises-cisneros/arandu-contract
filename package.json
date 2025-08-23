@@ -1,0 +1,27 @@
+{
+  "name": "arandu-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.3",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "generate": "yarn workspace hardhat run scripts/generate.js",
+    "account": "yarn workspace hardhat run scripts/account.js",
+    "deploy": "yarn workspace hardhat run scripts/deploy.js",
+    "wallets": "yarn workspace hardhat run scripts/wallets.js",
+    "faucet": "yarn workspace hardhat run scripts/faucet.js",
+    "compile": "yarn workspace hardhat compile",
+    "test": "yarn workspace hardhat test",
+    "deploy:fuji": "yarn workspace hardhat deploy:fuji",
+    "deploy:sepolia": "yarn workspace hardhat deploy:sepolia",
+    "deploy:avalanche": "yarn workspace hardhat deploy:avalanche",
+    "deploy:local": "yarn workspace hardhat deploy:local",
+    "start": "yarn workspace react-app dev",
+    "build": "yarn workspace react-app build",
+    "clean": "yarn workspace hardhat clean && rm -rf packages/hardhat/deployments && rm -rf packages/react-app/contracts",
+    "node": "yarn workspace hardhat node"
+  }
+}

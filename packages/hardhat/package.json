@@ -1,0 +1,34 @@
+{
+  "name": "hardhat",
+  "packageManager": "yarn@3.2.3",
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "node scripts/deploy.js",
+    "deploy:fuji": "node scripts/deploy.js --network fuji",
+    "deploy:sepolia": "node scripts/deploy.js --network sepolia",
+    "deploy:avalanche": "node scripts/deploy.js --network avalanche",
+    "deploy:local": "node scripts/deploy.js --network localhost",
+    "generate": "node scripts/generate.js",
+    "account": "node scripts/account.js",
+    "wallets": "node scripts/wallets.js",
+    "faucet": "node scripts/faucet.js",
+    "node": "hardhat node",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@inquirer/confirm": "^4.0.0",
+    "@inquirer/input": "^3.0.0",
+    "@inquirer/password": "^3.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "chalk": "^5.3.0",
+    "dotenv": "^17.2.1",
+    "hardhat": "^3.0.1",
+    "hardhat-deploy": "^0.12.4",
+    "solidity-coverage": "^0.8.16"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
+  }
+}
