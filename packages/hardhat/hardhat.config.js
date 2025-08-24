@@ -1,16 +1,16 @@
-import "@nomicfoundation/hardhat-toolbox";
-import "hardhat-deploy";
-import * as dotenv from "dotenv";
+require("@nomiclabs/hardhat-ethers");
+require("hardhat-deploy");
+const dotenv = require("dotenv");
 dotenv.config();
 
-// Get runtime private key if available (set by deploy script)
-const deployerPrivateKey = process.env.__RUNTIME_DEPLOYER_PRIVATE_KEY ||
+// Get private key from environment variable
+const deployerPrivateKey = process.env.PRIVATE_KEY ||
   "0x0000000000000000000000000000000000000000000000000000000000000000";
 
 /** @type import('hardhat/config').HardhatUserConfig */
 const config = {
   solidity: {
-    version: "0.8.20",
+    version: "0.8.27",
     settings: {
       optimizer: {
         enabled: true,
@@ -125,4 +125,4 @@ const config = {
   },
 };
 
-export default config;
+module.exports = config;

@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity 0.8.27;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 /**
- * @title AranduCertificado
+ * @title AranduCertificate
  * @dev Contrato para emitir certificados de logros como NFTs (ERC721).
  * La propiedad del contrato está restringida, permitiendo que solo la plataforma ARANDU
  * pueda emitir nuevos certificados a los estudiantes.
  */
-contract AranduCertificado is ERC721, Ownable {
+contract AranduCertificate is ERC721, Ownable {
     // Contador para el ID del próximo token a ser emitido.
     uint256 private _nextTokenId;
 
@@ -28,7 +28,6 @@ contract AranduCertificado is ERC721, Ownable {
 
     /**
      * @dev Permite al dueño del contrato establecer la URI base para los metadatos.
-     * Ejemplo: "https://api.arandu.io/nfts/"
      */
     function _setBaseURI(string memory baseURI) internal {
         _baseTokenURI = baseURI;

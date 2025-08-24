@@ -1,8 +1,8 @@
-import * as dotenv from "dotenv";
+const dotenv = require("dotenv");
 dotenv.config();
-import { Wallet, JsonRpcProvider, formatEther } from "ethers";
-import password from "@inquirer/password";
-import chalk from "chalk";
+const { Wallet, providers, utils } = require("ethers");
+const password = require("@inquirer/password").default;
+const chalk = require("chalk");
 
 /**
  * Shows the deployer account information and balances across networks
@@ -62,9 +62,9 @@ async function main() {
                     continue;
                 }
 
-                const provider = new JsonRpcProvider(network.rpcUrl);
+                const provider = new providers.JsonRpcProvider(network.rpcUrl);
                 const balance = await provider.getBalance(wallet.address);
-                const formattedBalance = formatEther(balance);
+                const formattedBalance = utils.formatEther(balance);
 
                 const balanceColor = parseFloat(formattedBalance) > 0 ? 'green' : 'red';
                 console.log(`   ${network.name}: ${chalk[balanceColor](formattedBalance)} ${network.symbol}`);
@@ -84,7 +84,7 @@ async function main() {
 
         if (networks.some(n => {
             // Check if any testnet balance is low (less than 0.01)
-            return n.name.includes("Testnet") && parseFloat(formatEther(0)) < 0.01;
+            return n.name.includes("Testnet") && parseFloat(utils.formatEther(0)) < 0.01;
         })) {
             console.log(chalk.yellow("\n⚠️  Your testnet balances are low. Consider using faucets:"));
             console.log(chalk.blue("   Sepolia ETH: https://sepoliafaucet.com/"));

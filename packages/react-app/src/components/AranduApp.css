@@ -1,0 +1,288 @@
+/* Estilos para la aplicación ARANDU */
+.arandu-app {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.arandu-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.arandu-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.arandu-header p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.arandu-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.panel h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.network-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.network-selector label {
+    font-weight: 500;
+    color: #555;
+}
+
+.network-selector select {
+    padding: 0.5rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background: white;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.network-selector select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.wallet-info {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+}
+
+.wallet-info p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.wallet-info strong {
+    color: #495057;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.contract-addresses {
+    margin-top: 1rem;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.contract-addresses h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: #495057;
+}
+
+.contract-addresses ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contract-addresses li {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+    font-family: 'Courier New', monospace;
+}
+
+.contract-addresses strong {
+    color: #495057;
+}
+
+.logs-panel {
+    grid-column: 1 / -1;
+    max-height: 400px;
+}
+
+.logs {
+    max-height: 300px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.no-logs {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    margin: 0;
+}
+
+.log-entry {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: 'Courier New', monospace;
+    border-left: 3px solid #dee2e6;
+}
+
+.log-time {
+    color: #6c757d;
+    margin-right: 0.5rem;
+}
+
+.log-message {
+    color: #495057;
+}
+
+.log-info {
+    background: #e7f3ff;
+    border-left-color: #007bff;
+}
+
+.log-success {
+    background: #d4edda;
+    border-left-color: #28a745;
+}
+
+.log-warning {
+    background: #fff3cd;
+    border-left-color: #ffc107;
+}
+
+.log-error {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .arandu-main {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .arandu-header h1 {
+        font-size: 2rem;
+    }
+
+    .panel {
+        padding: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.panel {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Efectos de hover */
+.panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}

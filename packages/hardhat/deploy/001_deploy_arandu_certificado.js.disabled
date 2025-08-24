@@ -16,7 +16,7 @@ const deployAranduCertificate = async (hre) => {
     // Deploy the main contract
     const AranduCertificate = await deploy("AranduCertificate", {
         from: deployer,
-        args: [], // Add constructor arguments here if needed
+        args: [deployer], // initialOwner
         log: true,
         waitConfirmations: hre.network.live ? 5 : 1, // Wait for confirmations on live networks
     });

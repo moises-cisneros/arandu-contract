@@ -18,3 +18,11 @@ packages/react-app/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Archivos no rastreados
+packages/hardhat/.env
+packages/react-app/.env
+packages/hardhat/wallets/*
+packages/hardhat/deployments/*
+packages/hardhat/typechain/*
+packages/react-app/src/abis/*
