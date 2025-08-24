@@ -10,6 +10,8 @@
 export const NETWORKS = {
     // Localhost Hardhat (Para desarrollo y testing)
     LOCALHOST: {
+        name: 'Localhost',
+        rpcUrl: 'http://localhost:8545',
         CERTIFICATES: "0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8",
         ANDU_TOKEN: "0xa82fF9aFd8f496c3d6ac40E2a0F282E47488CFc9",
         REGISTRAR: "0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB",
@@ -24,15 +26,15 @@ export const NETWORKS = {
 
     // Avalanche Fuji Testnet 
     FUJI: {
-        CERTIFICATES: "0x6d61B3E4D0609f6D39590170e86ce2F8F0A41ddE",
-        ANDU_TOKEN: "0x7431acD1Db99b6BB8c61a926d3a9CA552a54f38e",
-        REGISTRAR: "0xbCE91B8Ad34746855B6680Da80fc0991DC8F04Eb",
+        CERTIFICATES: "0xfEaD59A75657C23f5e688039a577439635695159",
+        ANDU_TOKEN: "0x71a4285b7314C38856928e05AC0A5653C97f3A03",
+        REGISTRAR: "0x4369e648dDec73f0a2194a85C6A09913d7C62D6e",
         VERIFIERS: {
-            REGISTRATION: "0x14e59806054773fc341377aEC472C07e500BCc86",
-            MINT: "0xf4A6230C5388e2fF4036a26C09A36E0937a972D7",
-            TRANSFER: "0x1f65E72EE31F709969Dfc75f98f5867EaE332CD9",
-            BURN: "0x3028a9AfCD5E2c3C2E1fD35d984Be65640ca4e07",
-            WITHDRAW: "0xBB01f5338bF77E1b897c226A88fc13bd61Cd55FB"
+            REGISTRATION: "0x95C35DfD8bAFf7D64eB24782a31Bd15920f757A7",
+            MINT: "0x44e1b530a8F1288938927a41c085cd1c401462e7",
+            TRANSFER: "0x395577ebf34f083b8D5694799d90FBE3fF751Bac",
+            BURN: "0xD91A4017A5884d35cbC6A8c33C64726bCD3f652C",
+            WITHDRAW: "0x1d8DA9bCE1cC08eB23973A6Faa170b8C52a15593"
         }
     }
 };
@@ -55,6 +57,8 @@ export const ARANDU_CONTRACTS = {
         }
     },
     FUJI: {
+        name: 'Fuji',
+        rpcUrl: 'https://api.avax-test.network/ext/bc/C/rpc',
         CERTIFICATES: "0x6d61B3E4D0609f6D39590170e86ce2F8F0A41ddE",
         ANDU_TOKEN: "0x7431acD1Db99b6BB8c61a926d3a9CA552a54f38e",
         REGISTRAR: "0xbCE91B8Ad34746855B6680Da80fc0991DC8F04Eb",
@@ -78,7 +82,7 @@ export const TEST_WALLETS = {
         name: "Director"
     },
     docente: {
-        address: "0xDdbf3aeBcCa5B30e4F93E0b8b5d3d7dc2d3e8C38", 
+        address: "0xDdbf3aeBcCa5B30e4F93E0b8b5d3d7dc2d3e8C38",
         name: "Docente"
     }
 };

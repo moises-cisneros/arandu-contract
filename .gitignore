@@ -26,3 +26,4 @@ packages/hardhat/wallets/*
 packages/hardhat/deployments/*
 packages/hardhat/typechain/*
 packages/react-app/src/abis/*
+packages/hardhat/decryption_keys.json

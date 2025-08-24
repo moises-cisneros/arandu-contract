@@ -14,6 +14,7 @@
     "generate": "node scripts/generate.js",
     "account": "node scripts/account.js",
     "wallets": "node scripts/wallets.js",
+  "generate-decryption-keys": "node scripts/generateDecryptionKeys.js",
     "faucet": "node scripts/faucet.js",
     "chain": "hardhat node --network hardhat --no-deploy",
     "clean": "hardhat clean",

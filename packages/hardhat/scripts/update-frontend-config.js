@@ -250,6 +250,38 @@ function syncDeploymentsToFrontend(networkNameOrChainId) {
         }
 
         console.log(`✅ Copiadas ${copied} ABIs al frontend:`, frontendAbisDir);
+
+        // Además, intentar copiar decryption_keys.json (si existe) al frontend/src/contracts
+        try {
+            const frontendContractsDir = path.join(__dirname, '../../react-app/src/contracts');
+            if (!fs.existsSync(frontendContractsDir)) fs.mkdirSync(frontendContractsDir, { recursive: true });
+
+            // posibles ubicaciones del archivo de claves de descifrado
+            const candidateKeys = [
+                path.join(deploymentsDir, 'decryption_keys.json'),
+                path.join(__dirname, '../decryption_keys.json'),
+                path.join(__dirname, '../../decryption_keys.json')
+            ];
+
+            let foundKey = null;
+            for (const c of candidateKeys) {
+                if (fs.existsSync(c)) {
+                    foundKey = c;
+                    break;
+                }
+            }
+
+            if (foundKey) {
+                const dest = path.join(frontendContractsDir, 'decryption_keys.json');
+                fs.copyFileSync(foundKey, dest);
+                console.log('🔐 Copiado decryption_keys.json al frontend:', dest);
+            } else {
+                console.log('ℹ️  No se encontró decryption_keys.json en las rutas candidatas.');
+            }
+        } catch (e) {
+            console.log('⚠️  Error copiando decryption_keys.json al frontend:', e.message);
+        }
+
         return true;
     } catch (error) {
         console.log('❌ Error sincronizando deployments al frontend:', error.message);

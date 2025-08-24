@@ -1,4 +1,3 @@
-import React from 'react';
 import AranduApp from './components/AranduApp.jsx';
 import './App.css';
 
