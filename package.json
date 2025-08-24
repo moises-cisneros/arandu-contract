@@ -15,6 +15,7 @@
     "deploy:arandu-fuji": "yarn workspace hardhat deploy:arandu-fuji",
     "wallets": "yarn workspace hardhat wallets",
     "register:wallets": "yarn workspace hardhat node scripts/registerWallets.js --network fuji",
+    "generate:decryption-keys": "yarn workspace hardhat generate-decryption-keys",
     "faucet": "yarn workspace hardhat faucet",
     "compile": "yarn workspace hardhat compile",
     "test": "yarn workspace hardhat test",
